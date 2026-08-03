@@ -24,7 +24,7 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 - ✅ Chart deployed to local cluster
 
 **GitOps / ArgoCD**
-- ⬜ ArgoCD deployed to cluster
+- ✅ ArgoCD deployed to cluster (v2.13.6, via kubectl apply + Harbor proxy cache)
 - ⬜ ArgoCD Application manifest
 - ⬜ App synced via ArgoCD
 
