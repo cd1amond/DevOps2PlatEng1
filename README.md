@@ -4,27 +4,102 @@ Hands-on project workspace for the [Udemy course](https://leidos.udemy.com/cours
 
 ## Progress
 
-### Foundation
+### Section 1: Introduction ✅
+Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
+
+### Section 2: Level Up Your DevOps Skills
+
+**Python / Docker**
 - ✅ Flask API (`src/app.py`)
 - ✅ Dockerfile
+- ⬜ Image pushed to Docker Hub registry
+
+**Kubernetes**
+- ✅ Raw K8s manifests (`k8s/deploy.yaml`, `k8s/service.yaml`, `k8s/ingress.yaml`)
+- ✅ Local cluster running (kind/Docker)
+- ⬜ Ingress controller configured
+
+**Helm**
 - ✅ Helm chart (`charts/python-app/`)
-- ⬜ Raw K8s manifests (`k8s/`)
+- ✅ Chart deployed to local cluster
 
-### CI/CD
-- ⬜ GitHub Actions pipeline
-
-### GitOps / ArgoCD
+**GitOps / ArgoCD**
+- ⬜ ArgoCD deployed to cluster
 - ⬜ ArgoCD Application manifest
-- ⬜ ArgoCD sync configured
+- ⬜ App synced via ArgoCD
 
-### Backstage IDP
-- ⬜ Backstage instance deployed
+**CI — GitHub Actions**
+- ⬜ CI workflow (build + push image with dynamic tags)
+- ⬜ GitHub secrets configured (Docker credentials)
+
+**CD — GitHub Actions**
+- ⬜ Self-hosted runner configured
+- ⬜ CD workflow (ArgoCD sync on merge)
+- ⬜ YAML values updated programmatically in pipeline
+
+### Section 3: Platform Engineering — Meet Backstage
+
+**Backstage Setup**
+- ⬜ Backstage deployed via Docker
+- ⬜ GitHub OAuth configured
+- ⬜ Plugins downloaded and added to frontend
+- ⬜ Backstage authentication working
+
+### Section 4: Backstage Software Catalog
+
+- ⬜ Group entities configured
 - ⬜ `catalog-info.yaml` (service registered)
-- ⬜ TechDocs site
-- ⬜ Software Template
+- ⬜ Existing components registered in catalog
 
-### Production Deployment
-- ⬜ Backstage deployed to Kubernetes
+### Section 5: Backstage TechDocs
+
+- ⬜ `docs/` folder with Markdown documentation
+- ⬜ `mkdocs.yml` configured
+- ⬜ TechDocs plugin installed and configured
+- ⬜ Docs rendering in Backstage
+
+### Section 6: Backstage Software Templates
+
+**Setup**
+- ⬜ Backstage Actions plugin installed and configured
+- ⬜ GitHub integrated with Backstage
+- ⬜ Dedicated GitHub repo for Software Templates
+
+**Template Development**
+- ⬜ Input parameters defined
+- ⬜ Template steps defined
+- ⬜ `catalog-info.yaml` wired into template
+- ⬜ DevOps project rewritten as a Backstage Software Template
+- ⬜ Template renders successfully in Backstage
+
+**GitHub Orgs & Distributed Builds**
+- ⬜ GitHub organization configured
+- ⬜ Distributed builds on GitHub Orgs
+- ⬜ Repository properties configurable from Backstage Actions
+
+**ArgoCD Integration**
+- ⬜ ArgoCD operations automated via Backstage Templates
+- ⬜ Full template tested end-to-end (repo create → ArgoCD sync)
+
+**CI/CD View**
+- ⬜ CI/CD view customized in Backstage
+
+### Section 7: Backstage in Production Mode
+
+- ⬜ PostgreSQL database provisioned for Backstage
+- ⬜ Production config file (`app-config.production.yaml`)
+- ⬜ Backstage backend built as a bundle
+- ⬜ Production-ready Dockerfile for Backstage
+- ⬜ Backstage + Postgres deployed as Docker containers
+### Section 8: Backstage on Kubernetes
+
+- ⬜ PostgreSQL deployed to K8s via Helm
+- ⬜ Kubernetes manifests for Backstage
+- ⬜ Backstage Docker image pushed to registry
+- ⬜ Backstage deployed and running on Kubernetes
+
+### Section 9: You Did It! ⬜
+Course complete.
 
 ## Quick Reference
 
