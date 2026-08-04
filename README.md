@@ -12,7 +12,7 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 **Python / Docker**
 - ✅ Flask API (`src/app.py`)
 - ✅ Dockerfile
-- ⬜ Image pushed to Docker Hub registry
+- ✅ Image pushed to Docker Hub registry (`cdiamond/python-app`)
 
 **Kubernetes**
 - ✅ Raw K8s manifests (`k8s/deploy.yaml`, `k8s/service.yaml`, `k8s/ingress.yaml`)
@@ -29,8 +29,8 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 - ⬜ App synced via ArgoCD
 
 **CI — GitHub Actions**
-- ⬜ CI workflow (build + push image with dynamic tags)
-- ⬜ GitHub secrets configured (Docker credentials)
+- ✅ CI workflow (build + push image with dynamic tags)
+- ✅ GitHub secrets configured (Docker credentials)
 
 **CD — GitHub Actions**
 - ⬜ Self-hosted runner configured
