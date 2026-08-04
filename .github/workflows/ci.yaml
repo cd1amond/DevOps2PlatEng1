@@ -27,5 +27,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: diamondcj/python-app:${{ env.COMMIT_ID }}
+          tags: cdiamond/python-app:${{ env.COMMIT_ID }}
 
