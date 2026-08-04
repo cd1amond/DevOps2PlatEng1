@@ -81,7 +81,7 @@ git -C /Users/diamondcj/dev/DevOps2PlatEng1 log --oneline -5
 
 ## Sharp edges the executor will hit
 
-- **Git pushes require PAT in URL** due to macOS keychain caching old token. Pattern: `git remote set-url origin https://cd1amond:<PAT>@github.com/cd1amond/DevOps2PlatEng1.git && git push && git remote set-url origin https://github.com/cd1amond/DevOps2PlatEng1.git`. Remind user to rotate PAT after use.
+- **Git pushes:** keychain is correctly configured with current PAT (fixed end of session 1). Plain `git push` works. If it breaks again, fix with `printf 'protocol=https\nhost=github.com\nusername=cd1amond\npassword=<PAT>\n' | git credential-osxkeychain store`.
 - **Any new K8s images** must be pulled through Harbor proxy caches. Check which proxy cache covers the image's registry before deploying.
 - **CD workflow (lecture 48–60)** uses a self-hosted runner — the runner registers to GitHub and runs on the user's Mac. It needs `kubectl`, `argocd` CLI, and `python`/`pip` (for `yq`) in PATH.
 - **ArgoCD was installed via kubectl apply, not Helm** — don't try to manage it with Helm.
