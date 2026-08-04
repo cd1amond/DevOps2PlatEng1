@@ -33,7 +33,7 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 - ✅ GitHub secrets configured (Docker credentials)
 
 **CD — GitHub Actions**
-- ⬜ Self-hosted runner configured
+- ⬜ Self-hosted runner configured  ← starting here (lecture 48)
 - ⬜ CD workflow (ArgoCD sync on merge)
 - ⬜ YAML values updated programmatically in pipeline
 
