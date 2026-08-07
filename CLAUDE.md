@@ -61,3 +61,13 @@ charts/python-app/  Helm chart wrapping the same deployment
 The Helm chart supports both classic Ingress (`ingress.enabled`) and Gateway API HTTPRoute (`httpRoute.enabled`). Both are disabled by default. The `containerPort` and `service.port` both use the value from `values.yaml` (`5000`), so changing the port only requires updating `values.yaml`.
 
 The liveness/readiness probes in `values.yaml` currently point to `/` (root), which returns a 404 since the app only handles `/api/v1/*`. Update probes to `/api/v1/healthz` when deploying to a real cluster.
+
+## Local Environment Guardrails
+
+- **Two kind clusters share one Rancher Desktop VM (~9.7Gi RAM), only one fits at a time.** `forge-idp` (context `forge-idp`, container `kind-control-plane`) is the user's main dev cluster — never delete it or its namespaces. `devops-course` (context `kind-devops-course`, container `devops-course-control-plane`) is this course's cluster. Switch via:
+  ```bash
+  docker stop kind-control-plane && docker start devops-course-control-plane && kubectl config use-context kind-devops-course
+  docker stop devops-course-control-plane && docker start kind-control-plane && kubectl config use-context forge-idp
+  ```
+- **Corporate network blocks direct pulls** from quay.io/ghcr.io/registry.k8s.io (TLS inspection breaks cert validation). Route every image through the Harbor pull-through proxy: `harbor.lsdeint.leidos.com/<cache>/<upstream-path>:<tag>` — caches are `quay-proxy-cache`, `docker-hub-proxy-cache` (official images need `/library/` prefix, e.g. `docker-hub-proxy-cache/library/redis`), `ghcr-proxy-cache`, `gcr-proxy-cache`, `dhi-proxy-cache`. No `registry.k8s.io` mirror exists. `cdiamond/python-app` (this project's own image) is public and doesn't need rewriting.
+- No memory MCP server in this environment (removed — was unreliable). Durable notes belong here in CLAUDE.md, not in a memory tool.
