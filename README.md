@@ -17,7 +17,7 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 **Kubernetes**
 - ✅ Raw K8s manifests (`k8s/deploy.yaml`, `k8s/service.yaml`, `k8s/ingress.yaml`)
 - ✅ Local cluster running (kind/Docker)
-- ⬜ Ingress controller configured
+- ✅ Ingress controller configured (ingress-nginx v1.11.3, pulled directly from `registry.k8s.io` after fixing the node's CA trust store — see CLAUDE.md)
 
 **Helm**
 - ✅ Helm chart (`charts/python-app/`)
