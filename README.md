@@ -18,6 +18,7 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 - ✅ Raw K8s manifests (`k8s/deploy.yaml`, `k8s/service.yaml`, `k8s/ingress.yaml`)
 - ✅ Local cluster running (kind/Docker)
 - ✅ Ingress controller configured (ingress-nginx v1.11.3, pulled directly from `registry.k8s.io` after fixing the node's CA trust store — see CLAUDE.md)
+- ✅ `python-app` Ingress (`k8s/ingress.yaml`, host `python-app.test.com`) — routes correctly, verified from inside the Rancher Desktop VM. Not reachable from the Mac browser: `devops-course` was created without `extraPortMappings`, so the NodePort isn't published to the host. Would need cluster recreation to fix — see CLAUDE.md.
 
 **Helm**
 - ✅ Helm chart (`charts/python-app/`)
