@@ -44,11 +44,18 @@ jobs:
           git add charts/python-app/values.yaml
           git commit -m "chore: deploy image ${COMMIT_ID}"
           git push
+    outputs:
+      commit_id: ${{ env.COMMIT_ID }}
 
   cd:
     needs: ci
     runs-on: self-hosted
     steps:
+      -
+        name: Show deployed commit
+        shell: bash
+        run: |
+          echo "Deploying commit ${{ needs.ci.outputs.commit_id }}"
       -
         name: Install argocd CLI
         shell: bash

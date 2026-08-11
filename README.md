@@ -26,17 +26,17 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 
 **GitOps / ArgoCD**
 - ✅ ArgoCD deployed to cluster (v2.13.6, via kubectl apply + Harbor proxy cache)
-- ⬜ ArgoCD Application manifest
-- ⬜ App synced via ArgoCD
+- ✅ ArgoCD Application manifest (`python-app`, points at `charts/python-app` on `main`)
+- ✅ App synced via ArgoCD
 
 **CI — GitHub Actions**
 - ✅ CI workflow (build + push image with dynamic tags)
 - ✅ GitHub secrets configured (Docker credentials)
 
 **CD — GitHub Actions**
-- ⬜ Self-hosted runner configured  ← starting here (lecture 48)
-- ⬜ CD workflow (ArgoCD sync on merge)
-- ⬜ YAML values updated programmatically in pipeline
+- ✅ Self-hosted runner configured
+- ✅ CD workflow (ArgoCD sync on merge)
+- ✅ YAML values updated programmatically in pipeline (`yq` bumps `charts/python-app/values.yaml` image tag, commits back to `main`)
 
 ### Section 3: Platform Engineering — Meet Backstage
 
