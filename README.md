@@ -41,10 +41,10 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 ### Section 3: Platform Engineering — Meet Backstage
 
 **Backstage Setup**
-- ⬜ Backstage deployed via Docker
-- ⬜ GitHub OAuth configured
+- ✅ Backstage deployed via Docker
+- ✅ GitHub OAuth configured
 - ⬜ Plugins downloaded and added to frontend
-- ⬜ Backstage authentication working
+- ✅ Backstage authentication working
 
 ### Section 4: Backstage Software Catalog
 
