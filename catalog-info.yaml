@@ -5,7 +5,7 @@ metadata:
   description: A python app that displays time.
   annotations:
     github.com/project-slug: cd1amond/DevOps2PlatEng1
-
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: development

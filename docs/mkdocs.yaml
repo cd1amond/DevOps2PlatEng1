@@ -1,0 +1,12 @@
+site_name: 'python-app'
+site_description: 'Main documentation for the python-app'
+repo_url: https://github.com/cd1amond/DevOps2PlatEng1
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+
+# For sidebar navigation on https://backstage.io/, see `microsite/sidebars.json`
+nav:
+  - Overview:
+      - Getting started: 'docs/index.md'
