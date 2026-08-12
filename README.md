@@ -43,21 +43,21 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 **Backstage Setup**
 - ✅ Backstage deployed via Docker
 - ✅ GitHub OAuth configured
-- ⬜ Plugins downloaded and added to frontend
+- ✅ Plugins downloaded and added to frontend
 - ✅ Backstage authentication working
 
 ### Section 4: Backstage Software Catalog
 
-- ⬜ Group entities configured
-- ⬜ `catalog-info.yaml` (service registered)
-- ⬜ Existing components registered in catalog
+- ✅ Group entities configured
+- ✅ `catalog-info.yaml` (service registered)
+- ✅ Existing components registered in catalog
 
 ### Section 5: Backstage TechDocs
 
-- ⬜ `docs/` folder with Markdown documentation
-- ⬜ `mkdocs.yml` configured
-- ⬜ TechDocs plugin installed and configured
-- ⬜ Docs rendering in Backstage
+- ✅ `docs/` folder with Markdown documentation
+- ✅ `mkdocs.yml` configured
+- ✅ TechDocs plugin installed and configured
+- ✅ Docs rendering in Backstage
 
 ### Section 6: Backstage Software Templates
 
