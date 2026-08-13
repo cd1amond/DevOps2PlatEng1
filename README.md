@@ -62,12 +62,12 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 ### Section 6: Backstage Software Templates
 
 **Setup**
-- ⬜ Backstage Actions plugin installed and configured
-- ⬜ GitHub integrated with Backstage
-- ⬜ Dedicated GitHub repo for Software Templates
+- ✅ Backstage Actions plugin installed and configured
+- ✅ GitHub integrated with Backstage
+- ✅ Dedicated GitHub repo for Software Templates
 
 **Template Development**
-- ⬜ Input parameters defined
+- ✅ Input parameters defined
 - ⬜ Template steps defined
 - ⬜ `catalog-info.yaml` wired into template
 - ⬜ DevOps project rewritten as a Backstage Software Template
