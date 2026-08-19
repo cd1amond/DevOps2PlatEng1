@@ -70,7 +70,7 @@ Conceptual overview — Platform Engineering, IDPs, and Backstage. No artifacts.
 - ✅ Input parameters defined
 - ✅ Template steps defined
 - ✅ `catalog-info.yaml` wired into template
-- ⬜ DevOps project rewritten as a Backstage Software Template
+- ✅ DevOps project rewritten as a Backstage Software Template
 - ✅ Template renders successfully in Backstage
 
 **GitHub Orgs & Distributed Builds**
